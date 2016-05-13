@@ -10,3 +10,10 @@ services:
     image: mongo
     ports:
       - "27017:27017"
+    volumes_from:
+      - auth_mongodata
+  auth_mongodata:
+    image: mongo
+    volumes:
+      - /data/db
+    command: echo 'Data Container for Auth_MongoDB'
