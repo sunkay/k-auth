@@ -2,6 +2,8 @@ version: '2'
 services:
   auth:
     build: .
+    volumes:
+      - ./:/usr/src/app
     ports:
       - "3090:3090"
     links:
@@ -13,7 +15,6 @@ services:
     volumes_from:
       - auth_mongodata
   auth_mongodata:
-    image: mongo
+    image: tianon/true
     volumes:
       - /data/db
-    command: echo 'Data Container for Auth_MongoDB'
