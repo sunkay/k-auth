@@ -1,4 +1,4 @@
-# Project Title
+# k-auth (Easy Authentication and Authorization API)
 
 An authentication microservice with a simple REST based API. Uses JWT Tokens to handle signup, signin and other authentication related functionality.
 
