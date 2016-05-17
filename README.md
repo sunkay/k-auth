@@ -21,6 +21,17 @@ npm
 docker
 docker-compose
 ```
+## Have to create the secret that is required for JWT Tokens
+
+Create a file in the server folder called config-secret.js & add the following. The secret can be any random set of characters...
+
+```
+// hold application secrets and config
+
+module.exports = {
+  secret: "askdlmnz234casdf234safa324"
+}
+```
 
 ### Request & Response Examples
 
