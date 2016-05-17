@@ -10,6 +10,7 @@ These instructions will get you a copy of the project up and running on your loc
 1. git clone https://github.com/sunkay/k-auth.git
 2. docker-compose up
 ```
+##### check m-diary for the client to this microservice
 
 ### Prerequisities
 
