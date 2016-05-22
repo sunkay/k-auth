@@ -1,0 +1,18 @@
+version: '2'
+services:
+  auth:
+    image: sunkay/k-auth:0.1
+    ports:
+      - "3090:3090"
+    links:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes_from:
+      - auth_mongodata
+  auth_mongodata:
+    image: tianon/true
+    volumes:
+      - /data/db
