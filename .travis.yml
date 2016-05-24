@@ -2,11 +2,20 @@ language: node_js
 node_js:
   - '4'
 
-group: edge
+addons:
+  apt:
+    sources:
+      - mongodb-3.0-precise
+    packages:
+      - mongodb-org-server
 
 services:
   - docker
   - mongodb
+
+
+before_script:
+  - sleep 15
 
 env:
   global:
