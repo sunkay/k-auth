@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha **/*-test.js",
+    "test": "MONGO_URL=localhost MONGO_PORT=27017 mocha **/*-test.js",
     "start": "nodemon server.js"
   },
   "author": "",
