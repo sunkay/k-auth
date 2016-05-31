@@ -1,9 +1,12 @@
 version: '2'
 services:
-  auth:
+  k-auth:
     build: .
     volumes:
       - ./:/usr/src/app
+    environment:
+      MONGO_URL: 'mongo'
+      MONGO_PORT: '27017'
     ports:
       - "3090:3090"
     links:
@@ -12,9 +15,9 @@ services:
     image: mongo
     ports:
       - "27017:27017"
-    volumes_from:
-      - auth_mongodata
-  auth_mongodata:
-    image: tianon/true
     volumes:
-      - /data/db
+      - data-mongodb:/data/db
+
+volumes:
+  data-mongodb:
+    driver: local
